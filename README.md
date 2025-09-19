@@ -11,6 +11,13 @@
 - 💾 保存到原目录的子目录中，保持原文件不变
 - 🖼️ 支持多种图片格式：JPG, PNG, BMP, TIFF, WebP
 
+## 项目文件
+
+- `watermark.py` - 主程序文件
+- `requirements.txt` - 依赖包列表
+- `create_test_images.py` - 创建测试图片的工具（可选）
+- `sample_photos/` - 示例图片目录（包含测试图片）
+
 ## 安装依赖
 
 ```bash
@@ -20,10 +27,35 @@ pip install -r requirements.txt
 或者手动安装：
 
 ```bash
-pip install Pillow>=10.0.0 exifread>=3.0.0
+pip install Pillow>=10.0.0 exifread>=3.0.0 piexif>=1.1.3
 ```
 
-## 使用方法
+> 注意：`piexif` 仅在使用 `create_test_images.py` 创建测试图片时需要。
+
+## 快速开始
+
+1. **克隆项目**
+```bash
+git clone https://github.com/wwwangzd/AI4SE-Photo-Watermark.git
+cd AI4SE-Photo-Watermark
+```
+
+2. **安装依赖**
+```bash
+pip install -r requirements.txt
+```
+
+3. **创建测试图片（可选）**
+```bash
+python3 create_test_images.py
+```
+
+4. **运行水印程序**
+```bash
+python3 watermark.py sample_photos
+```
+
+## 详细使用方法
 
 ### 基本用法
 
