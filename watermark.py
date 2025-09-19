@@ -156,11 +156,8 @@ def add_watermark(image_path, output_path, date_text, font_size, color, position
             # 转换颜色
             rgb_color = hex_to_rgb(color)
             
-            # 绘制文本（带阴影效果）
-            shadow_offset = max(1, font_size // 20)
-            draw.text((x + shadow_offset, y + shadow_offset), date_text, 
-                     font=font, fill=(0, 0, 0, 128))  # 阴影
-            draw.text((x, y), date_text, font=font, fill=rgb_color)  # 主文本
+            # 绘制文本
+            draw.text((x, y), date_text, font=font, fill=rgb_color)
             
             # 保存图片
             img.save(output_path, quality=95)
